@@ -128,7 +128,7 @@ const technologies = [
 const experiences = [
   {
     title: "Analyst IT",
-    company_name: "Collabera",
+    company_name: "Collabera/HCL",
     icon: colabera,
     iconBg: "#E6DEDD",
     date: "July 2024 - Present",

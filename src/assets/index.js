@@ -39,6 +39,9 @@ import tripguide from "./tripguide.png";
 import estate from "./estate.png";
 import handsign from "./handsign.png";
 import faceex from "./faceex.png";
+import login_page from "./login_page.png";
+import anigal from "./anigal.png";
+
 
 
 export {
@@ -80,4 +83,6 @@ export {
   handsign,
   faceex,
   tripguide,
+  login_page,
+  anigal
 };

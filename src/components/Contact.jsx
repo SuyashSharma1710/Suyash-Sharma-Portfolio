@@ -16,65 +16,77 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
 
-  // Handle input changes and update form state
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setForm({
-  //     ...form,
-  //     [name]: value,
-  //   });
-  // };
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-  // // Handle form submission
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: "Suyash",
+          from_email: form.email,
+          to_email: "suyashsharma171001@gmail.com",
+          message: form.message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
 
-  //   emailjs
-  //     .send(
-  //       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  //       import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  //       {
-  //         from_name: form.name,
-  //         to_name: "Suyash",
-  //         from_email: form.email,
-  //         to_email: "suyashsharma171001@gmail.com",
-  //         message: form.message,
-  //       },
-  //       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-  //     )
-  //     .then(
-  //       () => {
-  //         setLoading(false);
-  //         alert("Thank you. I will get back to you as soon as possible.");
+          // Reset form fields
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
 
-  //         // Reset form fields
-  //         setForm({
-  //           name: "",
-  //           email: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         setLoading(false);
-  //         console.error(error);
-
-  //         alert("Ahh, something went wrong. Please try again.");
-  //       }
-  //     );
-  // };
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
+  };
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row h-screen flex-col-reverse gap-10 overflow-hidden`}>
-      {/* <motion.div
+    <div className={`xl:mt-12 flex xl:flex-row h-[80dvh] items-center flex-col-reverse gap-10 overflow-hidden`}>
+      <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl h-[350px]'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+        Suyash Sharma
+      </h2>
+      <p className="flex items-center text-lg">
+   +91 8755063079
+      </p>
+      <p className="flex items-center text-lg mt-2">
+       
+        <a href="mailto:Suyashsharma171001@gmail.com" className="hover:underline">
+          Suyashsharma171001@gmail.com
+        </a>
+      </p>
+
+         {/*
+         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input
@@ -115,8 +127,9 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
-        </form>
-      </motion.div> */}
+        </form> */}
+
+      </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}

@@ -33,6 +33,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  anigal,
+  login_page
 } from "../assets";
 
 export const navLinks = [
@@ -60,7 +62,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "MERN Stack",
     icon: backend,
   },
   {
@@ -127,17 +129,14 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Analyst IT",
-    company_name: "Collabera/HCL",
+    title: "Jr. Associate",
+    company_name: "The CodingCult",
     icon: colabera,
     iconBg: "#E6DEDD",
-    date: "July 2024 - Present",
-    points: [
-      "Provided essential technical support to troubleshoot and resolve hardware (computers, printers) and software issues, honing problem-solving skills crucial for web development challenges.",
-      "Configured and optimized hardware and software setups, ensuring robust system performance essential for web applications and services",
-      "Achieved consistently high resolution and customer satisfaction ratings, reflecting strong communication and client-focused skills pivotal in web development projects.",
-      "Installed and configured hardware and software, ensuring optimal system performance.",
-      "Managed and resolved network complexities involving Cisco devices, routers, switches, LAN, WAN, and MAN connections, ensuring reliable web service delivery.",
+    date: "Dec 2024 - Present",
+    points: ["Implemented a team, task and project management system, enabling 40% faster task assignment and improving the efficiency of time tracking by 35%.",
+      "Designed an intuitive user interface with role-based access, increased user engagement by 30%",
+      "improved progress tracking accuracy by 25%, and optimized resource allocation efficiency by 20%.",
     ],
   },
   {
@@ -172,11 +171,21 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
+      "Motivated Master's student with a strong foundation in academics, eager to apply knowledge and skills to impactful real-world projects.",
+    name: "Chandigarh University",
+    designation: "Master",
+    company: "Computer Application",
+    image: "MCA",
+    date: "2024-26"
+  },
+  {
+    testimonial:
       "Dedicated and passionate Bachelor's student eager to leverage academic knowledge and skills in real-world projects.",
     name: "COER University",
-    designation: "bachelor's",
+    designation: "Bachelor",
     company: "Computer Application",
     image: "BCA",
+    date: "2021-24"
   },
   {
     testimonial:
@@ -185,6 +194,7 @@ const testimonials = [
     designation: "Sudent",
     company: "PCM + Computer Science",
     image: "12th",
+    date: "2019-20"
   },
   {
     testimonial:
@@ -193,6 +203,7 @@ const testimonials = [
     designation: "Student",
     company: "CORE Subjects + Info. Technology",
     image: "10th",
+    date: "2017-18"
   },
 ];
 
@@ -219,6 +230,27 @@ const projects = [
     source_code_link: "https://github.com/SuyashSharma1710/E_Learning_PROJECT/",
   },
   {
+    name: "Anigal Photo Gallery App",
+    description:
+      "Anigal photo gallery app, built exclusively for landscape display. It leverages React, Vite, Tailwind CSS, and Framer Motion to create an interactive and visually engaging gallery experience.",
+    tags: [
+      {
+        name: "Vite",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: anigal,
+    source_code_link: "https://github.com/SuyashSharma1710/Anigal-React",
+  },
+  {
     name: "Estate Agency",
     description:
       "Web application that enables users to search for nearby properties for sale, view estimated price ranges for property, and locate available land based on their current location.",
@@ -240,7 +272,7 @@ const projects = [
     source_code_link: "https://github.com/SuyashSharma1710/estate-agency",
   },
   {
-    name: "Hand Sign Recog.",
+    name: "Hand Sign Recog",
     description:
       "Hand Gesture Recognition is a project focused on developing a computer vision system that can accurately detect and interpret human hand sign language in real-time.",
     tags: [
@@ -261,7 +293,7 @@ const projects = [
     source_code_link: "https://github.com/SuyashSharma1710/Hand_Gesture_Recognition",
   },
   {
-    name: "Facial Expression Recog.",
+    name: "Facial Expression Recog",
     description:
       "Facial Expression Recognition (FER) is a computer vision task aimed at identifying and categorizing emotional expressions depicted on a human face.",
     tags: [
@@ -280,6 +312,27 @@ const projects = [
     ],
     image: faceex,
     source_code_link: "https://github.com/SuyashSharma1710/face_expression_recognition_in_jupyter",
+  },
+  {
+    name: "Glassmorphosis Login Page",
+    description:
+      "A Glassmorphism Login Page features a frosted glass effect, giving it a modern sleek look and validation.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: login_page,
+    source_code_link: "https://github.com/SuyashSharma1710/login-page-validated",
   },
 ];
 
